@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="theme.css">
+	</head>
+		<body>		
+<center>
+		<p> <font color="Black" size="18" style="bold"> MY CALCULATOR </font></p>
+			<input class="heighti" style="font-size:35px"; type="text" id="num">
+		
+		<div>
+		<div></div>
+		<div></div>
+		<div></div>
+	  <button onclick="seven()">7</button>
+	  <button onclick="eight()">8</button>
+	  <button onclick="nine()">9</button>
+	  <button onclick="add()">+</button>
+	  <div></div>
+
+	</div>
+
+	<div align="center" >
+		<div> </div>
+	  <button onclick="four()">4</button>
+	  <button onclick="five()">5</button>
+	  <button onclick="six()">6</button>
+	  <button onclick="subtract()">-</button>
+	  <div></div>
+	</div>
+
+	<div align="center">
+	  <button onclick="one()">1</button>
+	  <button onclick="two()">2</button>
+	  <button onclick="three()">3</button>
+	  <button onclick="multiply()">*</button>
+	</div>
+ 	
+ 	<div align="center"> 
+	  <div></div>
+	  <button style="width:70px"  onclick="cancel()">C</button>
+	  <button onclick="zero()">0</button>
+	  <button onclick="equals()">=</button>
+	  <button onclick="division()">/</button>
+	  <div></div>
+	</div>
+
+	  <script type="text/javascript">
+		  
+		  let n2 = 0;
+		  let calc = "" 
+		  let n1 = 0;
+
+
+		function add(){
+			n2 = document.getElementById("num").value;
+			document.getElementById("num").value = ""; calc="+"
+
+		  }
+
+		function subtract(){
+			n2 = document.getElementById("num").value;
+			document.getElementById("num").value = ""; calc="-"
+		  }
+  
+
+		   function multiply(){
+			n2 = document.getElementById("num").value;
+			document.getElementById("num").value = ""; calc="*"
+		  }
+
+
+		  function division(){
+			n2 = document.getElementById("num").value;
+			document.getElementById("num").value = ""; calc="/"
+		  }
+
+		   function cancel(){
+			document.getElementById("num").value = null;
+		  }
+		  
+
+		   function equals(){
+		    let n1 = document.getElementById("num").value;
+			if (calc == "+"){
+		    document.getElementById("num").value = parseInt(n1) + parseInt(n2);
+		  }
+		   else if (calc == "-"){
+		    document.getElementById("num").value = parseInt(n2) - parseInt(n1);
+			}
+			 else if (calc == "*"){
+		    document.getElementById("num").value = parseInt(n1) * parseInt(n2);
+			}
+			 else if (calc == "/"){
+		    document.getElementById("num").value = parseInt(n2) / parseInt(n1);
+			}	
+
+
+		 }
+
+
+		  function one(){
+			document.getElementById("num").value += 1;
+		  }
+		  
+		  function two(){
+		    document.getElementById("num").value += 2;
+		  }
+
+		   function three(){
+			document.getElementById("num").value += 3;
+		  }
+		  
+		  function four(){
+		    document.getElementById("num").value += 4;
+		  }
+
+		   function five(){
+			document.getElementById("num").value += 5;
+		  }
+		  
+		  function six(){
+		    document.getElementById("num").value += 6;
+		  }
+
+		   function seven(){
+			document.getElementById("num").value += 7;
+		  }
+		  
+		  function eight(){
+		    document.getElementById("num").value += 8;
+		  }
+
+		   function nine(){
+			document.getElementById("num").value += 9;
+		  }
+		  
+		  function zero(){
+		    document.getElementById("num").value += 0;
+		  }
+
+
+
+
+		</script>
+  </body>
+</html>
